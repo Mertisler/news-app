@@ -20,10 +20,11 @@ class MainActivity : ComponentActivity() {
         installSplashScreen()
         installSplashScreen()
 
+
         setContent {
             MyApplicationTheme {
                 // A surface container using the 'background' color from the theme
-
+                test()
             }
         }
     }
@@ -35,6 +36,9 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         text = "merhaba $name!",
         modifier = modifier
     )
+}
+@Composable
+fun test(){
 }
 
 @Preview(showBackground = true)
