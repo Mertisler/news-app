@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.example.myapplication.presentation.onboarding.OnBoardingScreen
 import com.example.myapplication.ui.theme.MyApplicationTheme
 import java.io.Console
 
@@ -18,12 +19,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
-        installSplashScreen()
 
         setContent {
             MyApplicationTheme {
-                // A surface container using the 'background' color from the theme
-
+                OnBoardingScreen()
             }
         }
     }
