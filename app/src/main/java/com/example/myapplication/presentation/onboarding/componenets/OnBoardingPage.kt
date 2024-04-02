@@ -61,8 +61,8 @@ fun OnBoardingPagePreview() {
     MyApplicationTheme {
         OnBoardingPage(
             page = Page(
-                title = "Lorem Ipsum is simply dummy",
-                description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                title = "başlık ",
+                description = "daha sonra değiştilecek açıklama.",
                 image = R.drawable.onboarding1
             )
         )
