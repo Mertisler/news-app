@@ -22,13 +22,15 @@ import androidx.compose.ui.unit.dp
 import com.example.myapplication.common.NewsButton
 import com.example.myapplication.common.NewsTextButton
 import com.example.myapplication.presentation.onboarding.Dimens.MediumPadding2
+import com.example.myapplication.presentation.onboarding.componenets.OnBoardingEvent
 import com.example.myapplication.presentation.onboarding.componenets.OnBoardingPage
 import com.example.myapplication.presentation.onboarding.componenets.PagerIndicator
 import kotlinx.coroutines.launch
+import kotlin.reflect.KFunction1
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun OnBoardingScreen() {
+fun OnBoardingScreen(onEvent: KFunction1<OnBoardingEvent, Unit>) {
     Column(modifier = Modifier.fillMaxSize()) {
         val pagerState = rememberPagerState(initialPage = 0) {
             pages.size
