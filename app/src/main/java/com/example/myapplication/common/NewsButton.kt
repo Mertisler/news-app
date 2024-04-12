@@ -14,7 +14,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
 @Composable
-
 fun NewsButton(
     text: String,
     onClick: () -> Unit,
@@ -31,6 +30,7 @@ fun NewsButton(
         Text(
             text = text,
             style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold),
+            color = Color.White
         )
     }
 }
@@ -44,7 +44,7 @@ fun NewsTextButton(
         Text(
             text = text,
             style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold),
-            color = Black
+            color = White
         )
     }
 }
