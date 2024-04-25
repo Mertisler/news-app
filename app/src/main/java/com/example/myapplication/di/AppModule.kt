@@ -3,9 +3,9 @@ package com.example.myapplication.di
 import android.app.Application
 import com.example.myapplication.data.manger.LocalUserMangerImpl
 import com.example.myapplication.domain.manger.LocalUserManger
-import com.example.myapplication.domain.usecases.AppEntryUseCases
-import com.example.myapplication.domain.usecases.ReadAppEntry
-import com.example.myapplication.domain.usecases.SaveAppEntry
+import com.example.myapplication.domain.usecases.app_entry.AppEntryUseCases
+import com.example.myapplication.domain.usecases.app_entry.ReadAppEntry
+import com.example.myapplication.domain.usecases.app_entry.SaveAppEntry
 
 import dagger.Module
 import dagger.Provides

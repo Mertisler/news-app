@@ -1,11 +1,10 @@
 package com.example.myapplication
 
-import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.myapplication.domain.usecases.AppEntryUseCases
+import com.example.myapplication.domain.usecases.app_entry.AppEntryUseCases
 import com.example.myapplication.presentation.nvgraph.Route
 
 import dagger.hilt.android.lifecycle.HiltViewModel

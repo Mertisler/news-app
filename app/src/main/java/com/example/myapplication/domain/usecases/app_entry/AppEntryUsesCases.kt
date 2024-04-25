@@ -1,4 +1,4 @@
-package com.example.myapplication.domain.usecases
+package com.example.myapplication.domain.usecases.app_entry
 
 
 data class AppEntryUseCases(
