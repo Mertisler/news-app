@@ -19,8 +19,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.myapplication.common.NewsButton
-import com.example.myapplication.common.NewsTextButton
+import com.example.myapplication.presentation.common.NewsButton
+import com.example.myapplication.presentation.common.NewsTextButton
 import com.example.myapplication.presentation.onboarding.Dimens.MediumPadding2
 import com.example.myapplication.presentation.onboarding.componenets.OnBoardingEvent
 import com.example.myapplication.presentation.onboarding.componenets.OnBoardingPage

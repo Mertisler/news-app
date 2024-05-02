@@ -1,4 +1,4 @@
-package com.example.myapplication.common
+package com.example.myapplication.presentation.common
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button

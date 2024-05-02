@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.presentation.mainActivity
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
