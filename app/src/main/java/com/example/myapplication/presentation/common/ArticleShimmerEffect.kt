@@ -1,5 +1,6 @@
 package com.example.myapplication.presentation.common
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
@@ -39,6 +40,7 @@ import coil.request.ImageRequest
 import com.example.myapplication.R
 import com.example.myapplication.presentation.onboarding.Dimens
 import com.example.myapplication.presentation.onboarding.Dimens.MediumPadding1
+import com.example.myapplication.ui.theme.MyApplicationTheme
 
 
 fun Modifier.shimmerEffect() = composed {
@@ -89,5 +91,13 @@ fun ArticleCardShimmerEffect(modifier: Modifier = Modifier) {
 
             }
         }
+    }
+}
+@Preview(showBackground = true)
+@Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
+@Composable
+fun ArticleCardShimmerEffectPreview(){
+    MyApplicationTheme {
+        ArticleCardShimmerEffect()
     }
 }
