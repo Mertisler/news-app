@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
-import com.example.myapplication.presentation.nvgraph.NavGraph
+import com.example.myapplication.presentation.navgraph.NavGraph
 import com.example.myapplication.ui.theme.MyApplicationTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
@@ -42,6 +42,7 @@ class MainActivity : ComponentActivity() {
                         darkIcons = !isSystemInDarkMode
                     )
                 }
+                //Add fillMaxSize()
                 Box(modifier = Modifier.background(MaterialTheme.colorScheme.background).fillMaxSize()) {
                     NavGraph(startDestination = viewModel.startDestination.value)
                 }
