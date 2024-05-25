@@ -18,8 +18,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.myapplication.R
-import com.example.myapplication.presentation.onboarding.Dimens.MediumPadding1
-import com.example.myapplication.presentation.onboarding.Dimens.MediumPadding2
+import com.example.myapplication.presentation.Dimens.MediumPadding1
+import com.example.myapplication.presentation.Dimens.MediumPadding2
 import com.example.myapplication.presentation.onboarding.Page
 import com.example.myapplication.ui.theme.MyApplicationTheme
 

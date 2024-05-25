@@ -1,36 +1,36 @@
-package com.example.myapplication.presentation.onboarding
+package com.example.myapplication.presentation.onboarding.componenets
 
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.navigationBarsPadding
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.derivedStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.example.myapplication.presentation.Dimens.MediumPadding2
 import com.example.myapplication.presentation.common.NewsButton
 import com.example.myapplication.presentation.common.NewsTextButton
-import com.example.myapplication.presentation.Dimens.MediumPadding2
-import com.example.myapplication.presentation.onboarding.componenets.OnBoardingEvent
-import com.example.myapplication.presentation.onboarding.componenets.OnBoardingPage
-import com.example.myapplication.presentation.onboarding.componenets.PagerIndicator
+import com.example.myapplication.presentation.onboarding.pages
 import kotlinx.coroutines.launch
-import kotlin.reflect.KFunction1
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun OnBoardingScreen(onEvent: KFunction1<OnBoardingEvent, Unit>) {
+fun OnBoardingScreen(
+    navController: NavController
+) {
+    val isSystemInDarkMode = isSystemInDarkTheme()
+    val systemUiColor = rememberSystemUiController()
+    SideEffect {
+        systemUiColor.setSystemBarsColor(
+            color = Color.Black.copy(0.1f),
+            darkIcons = isSystemInDarkMode
+        )
+    }
     Column(modifier = Modifier.fillMaxSize()) {
         val pagerState = rememberPagerState(initialPage = 0) {
             pages.size
@@ -82,8 +82,9 @@ fun OnBoardingScreen(onEvent: KFunction1<OnBoardingEvent, Unit>) {
                     text = buttonsState.value[1],
                     onClick = {
                         scope.launch {
-                            if (pagerState.currentPage == 3){
-                            }else{
+                            if (pagerState.currentPage == 2) {
+                                navController.navigate("")
+                            } else {
                                 pagerState.animateScrollToPage(
                                     page = pagerState.currentPage + 1
                                 )

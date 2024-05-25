@@ -1,4 +1,4 @@
-package com.example.myapplication.presentation.common
+package com.example.myapplication.presentation.home.components
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.clickable
@@ -29,10 +29,10 @@ import coil.request.ImageRequest
 import com.example.myapplication.R
 import com.example.myapplication.domain.model.Article
 import com.example.myapplication.domain.model.Source
-import com.example.myapplication.presentation.onboarding.Dimens.ArticleCardSize
-import com.example.myapplication.presentation.onboarding.Dimens.ExtraSmallPadding
-import com.example.myapplication.presentation.onboarding.Dimens.ExtrxaSmallPadding2
-import com.example.myapplication.presentation.onboarding.Dimens.SmallIconSize
+import com.example.myapplication.presentation.Dimens.ArticleCardSize
+import com.example.myapplication.presentation.Dimens.ExtraSmallPadding
+import com.example.myapplication.presentation.Dimens.ExtraSmallPadding2
+import com.example.myapplication.presentation.Dimens.SmallIconSize
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
 
@@ -78,7 +78,7 @@ fun ArticleCard(
                     style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
                     color = colorResource(id = R.color.body)
                 )
-                Spacer(modifier = Modifier.width(ExtrxaSmallPadding2))
+                Spacer(modifier = Modifier.width(ExtraSmallPadding2))
                 Icon(
                     painter = painterResource(id = R.drawable.ic_time),
                     contentDescription = null,
@@ -103,12 +103,12 @@ fun ArticleCardPreview() {
     MyApplicationTheme(dynamicColor = false) {
         ArticleCard(
             article = Article(
-                author = "",
-                content = "",
-                description = "",
+                author = "deneme",
+                content = "merhaba",
+                description = " açıklama",
                 publishedAt = "2 hours",
                 source = Source(id = "", name = "BBC"),
-                title = "Her train broke down. Her phone died. And then she met her Saver in a",
+                title = " merhaba bu deneme amaçlı olup daha sonra değiştirlecektir",
                 url = "",
                 urlToImage = "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/11787/production/_124395517_bbcbreakingnewsgraphic.jpg"
             )
