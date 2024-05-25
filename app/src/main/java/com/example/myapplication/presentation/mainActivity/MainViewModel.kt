@@ -14,25 +14,26 @@ import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
 @HiltViewModel
+
 class MainViewModel @Inject constructor(
     private val appEntryUseCases: AppEntryUseCases
 ): ViewModel() {
 
-    private val _splashCondition = mutableStateOf(true)
-    val splashCondition: State<Boolean> = _splashCondition
+   var splashCondition = mutableStateOf(true)
+       private set
 
-    private val _startDestination = mutableStateOf(Route.AppStartNavigation.route)
-    val startDestination: State<String> = _startDestination
+    var startDestination = mutableStateOf(Route.AppStartNavigation.route)
+        private set
 
     init {
         appEntryUseCases.readAppEntry().onEach { shouldStartFromHomeScreen ->
             if(shouldStartFromHomeScreen){
-                _startDestination.value = Route.NewsNavigation.route
+                startDestination.value = Route.NewsNavigation.route
             }else{
-                _startDestination.value = Route.AppStartNavigation.route
+                startDestination.value = Route.AppStartNavigation.route
             }
-            delay(200) //Without this delay, the onBoarding screen will show for a momentum.
-            _splashCondition.value = false
+            delay(200)
+            splashCondition.value = false
         }.launchIn(viewModelScope)
     }
 }

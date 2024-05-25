@@ -1,13 +1,10 @@
 package com.example.myapplication.presentation.home
 
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
-import androidx.paging.filter
 import com.example.myapplication.domain.usecases.news.NewsUseCases
-import com.example.myapplication.presentation.home.components.HomeState
 
 import dagger.hilt.android.lifecycle.HiltViewModel
 

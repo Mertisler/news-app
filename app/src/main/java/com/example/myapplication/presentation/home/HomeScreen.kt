@@ -1,5 +1,4 @@
 package com.example.myapplication.presentation.home
-
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.basicMarquee
@@ -21,10 +20,11 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import androidx.paging.compose.LazyPagingItems
 import com.example.myapplication.R
 import com.example.myapplication.domain.model.Article
-import com.example.myapplication.presentation.onboarding.Dimens.MediumPadding1
+import com.example.myapplication.presentation.Dimens.MediumPadding1
 import com.example.myapplication.presentation.common.ArticlesList
 import com.example.myapplication.presentation.common.SearchBar
 import com.example.myapplication.presentation.navgraph.Route

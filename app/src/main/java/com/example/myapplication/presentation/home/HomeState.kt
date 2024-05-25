@@ -1,4 +1,4 @@
-package com.example.myapplication.presentation.home.components
+package com.example.myapplication.presentation.home
 
 data class HomeState(
     val newsTicker: String = "",
